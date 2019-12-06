@@ -24,9 +24,8 @@ class Header extends Component {
 		const { addTodos } = this.props;
 		const { text } = this.state;
 		return (
-			<header style={style.container}>
+			<header>
 				<input
-					style={style.input}
 					onChange={this.onChangeEv}
 					value={text}
 					placeholder="할일을 입력해주세요"
@@ -42,7 +41,6 @@ class Header extends Component {
 						addTodos(text);
 						this.resetInputValue();
 					}}
-					style={style.button}
 				>
 					O
 				</button>
@@ -50,19 +48,5 @@ class Header extends Component {
 		);
 	}
 }
-
-const style = {
-	container: {
-		display: 'flex',
-		justifyContent: 'space-between',
-		height: 50
-	},
-	input: {
-		flexGrow: 2
-	},
-	button: {
-		flexGrow: 1
-	}
-};
 
 export default Header;

@@ -6,7 +6,7 @@ class List extends Component {
 		return (
 			<li>
 				<span>{text}</span>
-				<button onClick={_ => removeTodos(id)}>X</button>
+				<button onClick={_ => removeTodos(id)}></button>
 			</li>
 		);
 	}

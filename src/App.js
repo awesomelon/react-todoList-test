@@ -38,11 +38,10 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Header addTodos={this.addTodos} />
-				<ul style={style.ul}>
+				<ul>
 					{todos.map(data => {
 						return (
 							<List
-								style={style.li}
 								key={data.id}
 								text={data.text}
 								id={data.id}
@@ -55,17 +54,5 @@ class App extends Component {
 		);
 	}
 }
-
-const style = {
-	ul: {
-		display: 'flex'
-	},
-	li: {
-		flexGrow: 1,
-		height: 50,
-		marginBottom: 10,
-		borderBottom: '1px solid #ccc'
-	}
-};
 
 export default App;
